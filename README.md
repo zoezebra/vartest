@@ -1,4 +1,0 @@
-vartest
-=======
-
-Variable Test
