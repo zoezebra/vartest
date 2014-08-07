@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+'''
+Lesson 01, Code Analysis
+
+Alter `analyze.py` by minimally changing the file so that the code
+returns the following string:
+
+    .. code:: python
+
+        'It was a beautiful day to run ten miles in the park!'.
+'''
+
+
 def english_distance(distance):
     '''
     Returns english distance distance name from integer.
@@ -12,15 +26,15 @@ def english_distance(distance):
         english = english_distance(5)
     '''
     distances = {
-        1 : 'one', 
-        2 : 'two', 
-        3 : 'three', 
-        4 : 'four', 
-        5 : 'five', 
-        6 : 'six', 
-        7 : 'seven', 
-        8 : 'eight', 
-        9 : 'nine', 
+        1: 'one',
+        2: 'two',
+        3: 'three',
+        4: 'four',
+        5: 'five',
+        6: 'six',
+        7: 'seven',
+        8: 'eight',
+        9: 'nine',
     }
 
     if distance in distances:
@@ -52,4 +66,4 @@ def running_log(descriptor, distance, location):
     return 'It was a {} day to run {} miles {}'.format(descriptor, eng_dist,
                                                        location)
 
-print(running_log('rotten', 8, 'on the road.'))
+print running_log('rotten', 8, 'on the road.')

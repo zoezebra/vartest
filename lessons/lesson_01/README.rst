@@ -35,18 +35,16 @@ Simple math with variables
 
 #. Create a variable called `eggs` and assign it the value of `12`
 
-#. Divide the `eggs` variable by `2` and return the result
+#. Divide the `eggs` variable by `2` using a division operator and return the
+result
 
 String operations on a variable
 -------------------------------
 
-#. The file `string_ops.py` contains several string variables already. Begin by
-   adding a new line to concatenate the strings and save the resultant string 
-   into a new variable.
-
-#. Add another line to slice the new string variable in half.
-
-#. Return the first half.
+Begin by adding a new line to concatenate the strings variables using the
+string concatenation operator and save the resultant string into a new variable.
+Next, add another line to slice the new string variable in half. Return the
+first half of the variable.
 
 String formatting with variable substitution
 --------------------------------------------
@@ -54,7 +52,7 @@ String formatting with variable substitution
 #. Using the file `format.py`, create a new variable and assign it a value of 
    `24`.
 
-#. Return the `mystring` variable, performing a format operation that will pass 
+#. Return the `MYSTRING` constant, performing a format operation that will pass
    in the variable created in step #1.
 
 Advanced Application
