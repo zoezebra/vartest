@@ -10,7 +10,7 @@ Repository Cloning
 
 [stub]
 
-Running Tests (Optional)
+Tests (Optional)
 ========================
 
 Code and syntax checks may be optionally run on-site by the following methods.
@@ -31,13 +31,13 @@ project root:
 
     .. code-block:: bash
 
-        PYTHONPATH=$PYTHONPATH pylint -r n lessons
+        PYTHONPATH=$PWD:$PYTHONPATH pylint -r n lessons
 
 To test a specific lesson or file, pass it the package or filename:
 
     .. code-block:: bash
 
-        PYTHONPATH=$PYTHONPATH pylint -r n lessons/lesson_01/analyze.py
+        PYTHONPATH=$PWD:$PYTHONPATH pylint -r n lessons/lesson_01/analyze.py
 
 Unittest
 --------
@@ -55,4 +55,12 @@ To execute unit tests, type the following from the project root:
 
     .. code-block:: bash
 
-        python -m unittest discover test/unit/
+        nosetests -w test/unit
+
+Continuous Integration
+----------------------
+
+    .. code-block:: bash
+
+        docker build -t infosys-pytest-env .
+        docker run --rm -v MYREPO:/var/workspace/src infosys-pytest-env /var/workspace/src/build.sh
