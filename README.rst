@@ -62,5 +62,19 @@ Continuous Integration
 
     .. code-block:: bash
 
+        git clone git@github.com:cheuschober/jenkins-docker-executors.git
+        cd jenkins-docker-executors
+        docker build -t jenkins-docker .
+        docker run --name jenkins-docker -i -t -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -e "JENKINS_HOME=/var/jenkins_home" -v /my/persistent/store:/var/jenkins_home jenkins-docker
+
+
+The above will set up a useable docker server, however, if you wish to run the tests yourself,
+use the following commands.
+
+    .. code-block:: bash
+
+        cd ..
+        git clone git@github.com:cheuschober/vartest.git
+        cd vartest
         docker build -t infosys-pytest-env .
-        docker run --rm -v MYREPO:/var/workspace/src infosys-pytest-env /var/workspace/src/build.sh
+        docker run --rm -v $PWD:/var/workspace/ infosys-pytest-env /var/workspace/build.sh
