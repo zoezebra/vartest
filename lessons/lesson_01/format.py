@@ -13,4 +13,4 @@ Lesson 01, String formatting with variable substitution.
 MYSTRING = '{:0>2d} is the number of months I have on my contract.\n It, ' \
     '{:0>2d}, is also the name of my sister\'s favorite TV show.'
 
-MYSTRING = MYSTRING.format((24,24))
+MYSTRING = MYSTRING.format(24,24)

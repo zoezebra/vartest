@@ -6,9 +6,8 @@
 import unittest
 
 # Import user libs
-from lessons import lesson_01
 try:
-    from lesson_01 import integer
+    from lessons.lesson_01 import integer
     import_success = True
 except ImportError:
     import_success = False
@@ -31,9 +30,9 @@ class IntegerTestCase(unittest.TestCase):
         '''
         Tests if the variable was created and has a value.
         '''
-        self.assertTrue(hasattr(integer, 'cars'),
-                        msg='The cars variable is missing from this file.')
-        self.assertEqual(integer.cars, 100)
+        self.assertTrue(hasattr(integer, 'CARS'),
+                        msg='The CARS constant is missing from this file.')
+        self.assertEqual(integer.CARS, 100)
 
 
 if __name__ == '__main__':
